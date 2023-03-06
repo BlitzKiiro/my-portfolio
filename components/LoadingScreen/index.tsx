@@ -2,6 +2,7 @@ import cn from "classnames";
 import { useEffect, useState } from "react";
 import { Cairo } from "next/font/google";
 import { splashAnimation } from "./animations";
+import { enablePageScroll, disablePageScroll } from "scroll-lock";
 
 const cairo = Cairo({
   subsets: ["latin"],
@@ -12,8 +13,10 @@ const LoadingScreen = () => {
   const [visible, setVisible] = useState(true);
   useEffect(() => {
     (async () => {
+      disablePageScroll();
       await splashAnimation();
       setVisible(false);
+      enablePageScroll();
     })();
   }, []);
 
