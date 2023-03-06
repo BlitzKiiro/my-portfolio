@@ -1,7 +1,7 @@
 import Head from "next/head";
-import { Inter } from "next/font/google";
 
-const inter = Inter({ subsets: ["latin"] });
+import cn from "classnames";
+import About from "@/components/about";
 
 export default function Home() {
   return (
@@ -12,7 +12,13 @@ export default function Home() {
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <link rel='icon' href='/favicon.ico' />
       </Head>
-      <main></main>
+      <main
+        className={cn("flex flex-col items-center my-[25px] md:my-[200px]")}
+      >
+        <div className={cn("w-10/12", "xl:w-[1036px]")}>
+          <About />
+        </div>
+      </main>
     </>
   );
 }

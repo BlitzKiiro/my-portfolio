@@ -66,7 +66,9 @@ module.exports = {
             2: "#20C997",
           },
         },
-        alphabg: "#1a1c2085",
+      },
+      fontFamily: {
+        calibre: "calibre",
       },
     },
   },

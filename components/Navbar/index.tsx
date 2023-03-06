@@ -2,7 +2,11 @@ import cn from "classnames";
 import { Cairo } from "next/font/google";
 import { Bars3Icon } from "@heroicons/react/24/solid";
 import { useState } from "react";
-import ThemeIcon from "./themeIcons";
+import dynamic from "next/dynamic";
+
+const ThemeIcon = dynamic(() => import("./themeIcons"), {
+  ssr: false,
+});
 
 const cairo = Cairo({
   subsets: ["latin"],
@@ -20,7 +24,7 @@ const Navbar = () => {
     <nav className={cn("flex justify-center pt-12")}>
       <div
         className={cn(
-          "flex flex-wrap items-center justify-between gap-x-16 p-0",
+          "flex flex-wrap  justify-between gap-x-16 p-0",
           "md:flex-nowrap",
           "w-10/12",
           "xl:w-[1036px]"
@@ -34,10 +38,10 @@ const Navbar = () => {
             "dark:text-dark-text-1"
           )}
         >
-          <span className='font-extralight'>ahmed</span>Azmy
+          ahmedAzmy
         </div>
         {/* bars icon  */}
-        <div onClick={toggleMenu} className={cn("navlink inline", "md:hidden")}>
+        <div onClick={toggleMenu} className={cn(" inline", "md:hidden")}>
           <Bars3Icon className={cn("w-8 h-8")} />
         </div>
         {/* line break */}

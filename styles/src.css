@@ -2,13 +2,37 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: "calibre";
+  src: url("/assets/fonts/CalibreBlack.otf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "calibre";
+  src: url("/assets/fonts/CalibreBold.otf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: "calibre";
+  src: url("/assets/fonts/CalibreLight.otf") format("truetype");
+  font-weight: light;
+  font-style: normal;
+}
+
 body {
   @apply bg-light-bg-1 text-light-text-1;
   @apply dark:bg-dark-bg-1 dark:text-dark-text-1;
 }
 
 .navlink {
-  @apply text-light-text-3 hover:text-light-text-1;
-  @apply dark:text-dark-text-3 dark:hover:text-dark-text-1;
-  @apply cursor-pointer transition;
+  @apply text-light-text-1;
+  @apply dark:text-dark-text-1;
+  @apply font-semibold cursor-pointer transition;
+  @apply relative;
+  @apply after:content-[''] after:block after:absolute after:-bottom-2 after:w-full after:h-[2px];
+  @apply after:bg-light-primary-2 dark:after:bg-dark-primary-2;
+  @apply after:scale-0 after:hover:scale-100 after:transition;
 }
