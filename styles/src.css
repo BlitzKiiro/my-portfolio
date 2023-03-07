@@ -23,7 +23,7 @@
 }
 
 body::-webkit-scrollbar {
-  display: none;
+  @apply hidden;
 }
 
 body:has(#splash-container.hidden)::-webkit-scrollbar {

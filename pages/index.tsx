@@ -1,7 +1,7 @@
 import Head from "next/head";
-
 import cn from "classnames";
 import About from "@/components/about";
+import Work from "@/components/work";
 
 export default function Home() {
   return (
@@ -15,8 +15,15 @@ export default function Home() {
       <main
         className={cn("flex flex-col items-center my-[25px] md:my-[200px]")}
       >
-        <div className={cn("w-10/12", "xl:w-[1036px]")}>
+        <div
+          className={cn(
+            "w-10/12",
+            "xl:w-[1036px]",
+            "flex flex-col gap-y-[100px] md:gap-y-[200px]"
+          )}
+        >
           <About />
+          <Work />
         </div>
       </main>
     </>
