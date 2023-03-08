@@ -17,9 +17,11 @@ const Project = ({ project }: { project: propTypes }) => {
   return (
     <div className={cn("grid grid-cols-5 gap-10 my-10")}>
       <div
-        className={cn("col-span-5 md:col-span-3  ", {
-          "order-last": project.reversed,
-        })}
+        className={cn(
+          "col-span-5 md:col-span-3",
+          "order-last",
+          `${project.reversed ? "md:order-last" : "md:order-first"}`
+        )}
       >
         <Image
           width={1000}
@@ -45,7 +47,7 @@ const Project = ({ project }: { project: propTypes }) => {
         </div>
         <h1 className='text-2xl font-semibold mt-5'>{project.title}</h1>
         <p className='mt-5'>{project.description}</p>
-        <div className='mt-14 flex gap-x-3'>
+        <div className='mt-5 md:mt-14 flex flex-wrap gap-3'>
           {project.tags.map((tag, index) => {
             return (
               <span

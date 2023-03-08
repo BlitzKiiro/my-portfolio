@@ -1,0 +1,74 @@
+[
+  {
+    "label": "HTML5",
+    "img": "html.svg"
+  },
+  {
+    "label": "CSS3",
+    "img": "css.svg"
+  },
+  {
+    "label": "JavaScript",
+    "img": "javascript.svg"
+  },
+  {
+    "label": "TypeScript",
+    "img": "TypeScript.svg"
+  },
+  {
+    "label": "SASS",
+    "img": "sass.svg"
+  },
+  {
+    "label": "BootStrap",
+    "img": "bootstrap.svg"
+  },
+  {
+    "label": "Tailwind",
+    "img": "tailwind.svg"
+  },
+  {
+    "label": "AntDesign",
+    "img": "antd.svg"
+  },
+  {
+    "label": "anime.js",
+    "img": "animejs.png"
+  },
+  {
+    "label": "React",
+    "img": "react.svg"
+  },
+  {
+    "label": "Next.js",
+    "img": "nextjs.svg"
+  },
+  {
+    "label": "Redux",
+    "img": "redux.svg"
+  },
+  {
+    "label": "ReactQuery",
+    "img": "ReactQuery.svg"
+  },
+  {
+    "label": "Node.js",
+    "img": "nodejs.svg"
+  },
+  {
+    "label": "Express.js",
+    "img": "express.svg"
+  },
+  {
+    "label": "MongoDB",
+    "img": "MongoDB.svg"
+  },
+  {
+    "label": "Prisma",
+    "img": "prisma.svg"
+  },
+  {
+    "label": "Electron.js",
+    "img": "electron.svg"
+  }
+]

@@ -27,7 +27,7 @@ body::-webkit-scrollbar {
 }
 
 body:has(#splash-container.hidden)::-webkit-scrollbar {
-  @apply block w-3;
+  @apply block w-2;
 }
 body:has(#splash-container.hidden)::-webkit-scrollbar-thumb {
   @apply bg-light-primary-1 dark:bg-dark-primary-1;
