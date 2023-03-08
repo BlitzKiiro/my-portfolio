@@ -9,7 +9,7 @@ const Work = () => {
         <span className={cn("text-light-primary-1 dark:text-dark-primary-1")}>
           #{" "}
         </span>
-        Things I built
+        Things I Built
       </h1>
 
       {projectsMeta.map((projectInfo, index) => {

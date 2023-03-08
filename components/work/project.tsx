@@ -1,7 +1,7 @@
 import cn from "classnames";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowTopRightOnSquareIcon } from "@heroicons/react/24/solid";
+import { ArrowTrSquare } from "iconoir-react";
 
 interface propTypes {
   previewImg: string;
@@ -41,7 +41,7 @@ const Project = ({ project }: { project: propTypes }) => {
           </h1>
           <div className={cn("flex")}>
             <Link target={"_blank"} href={project.previewLink}>
-              <ArrowTopRightOnSquareIcon className={cn("w-6 h-6")} />
+              <ArrowTrSquare className={cn("w-6 h-6")} />
             </Link>
           </div>
         </div>

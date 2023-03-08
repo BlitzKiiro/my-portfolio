@@ -3,6 +3,7 @@ import cn from "classnames";
 import About from "@/components/about";
 import Work from "@/components/work";
 import Skills from "@/components/skills";
+import Contact from "@/components/contact/Contact";
 
 export default function Home() {
   return (
@@ -20,12 +21,13 @@ export default function Home() {
           className={cn(
             "w-10/12",
             "xl:w-[1036px]",
-            "flex flex-col gap-y-[100px] md:gap-y-[200px]"
+            "flex flex-col gap-y-[100px] md:gap-y-[150px]"
           )}
         >
           <About />
           <Work />
           <Skills />
+          <Contact />
         </div>
       </main>
     </>

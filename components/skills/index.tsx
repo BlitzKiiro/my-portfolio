@@ -9,7 +9,7 @@ const Skills = () => {
         <span className={cn("text-light-primary-1 dark:text-dark-primary-1")}>
           #{" "}
         </span>
-        What can I do
+        Technologies I Practice
       </h1>
       <div
         className={cn(

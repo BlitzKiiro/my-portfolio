@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import cn from "classnames";
-import { SunIcon, MoonIcon } from "@heroicons/react/24/solid";
+import { SunLight, HalfMoon } from "iconoir-react";
 import { lightAnimation, darkAnimation } from "./animations";
 import { useTheme } from "next-themes";
 
@@ -33,9 +33,9 @@ const ThemeIcon = () => {
       onClick={toggleMode}
     >
       {theme == "dark" ? (
-        <MoonIcon id='moon' className='h-6 w-6' />
+        <HalfMoon id='moon' className='h-6 w-6' />
       ) : (
-        <SunIcon id='sun' className='h-6 w-6' />
+        <SunLight id='sun' className='h-6 w-6' />
       )}
     </button>
   );

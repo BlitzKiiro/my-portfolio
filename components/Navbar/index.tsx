@@ -1,6 +1,6 @@
 import cn from "classnames";
 import { Cairo } from "next/font/google";
-import { Bars3Icon } from "@heroicons/react/24/solid";
+import { Menu } from "iconoir-react";
 import { useState } from "react";
 import dynamic from "next/dynamic";
 
@@ -42,7 +42,7 @@ const Navbar = () => {
         </div>
         {/* bars icon  */}
         <div onClick={toggleMenu} className={cn(" inline", "md:hidden")}>
-          <Bars3Icon className={cn("w-8 h-8")} />
+          <Menu className={cn("w-8 h-8")} />
         </div>
         {/* line break */}
         <div className={cn("basis-full", "md:hidden")}></div>
