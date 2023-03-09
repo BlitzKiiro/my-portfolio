@@ -38,6 +38,7 @@ body:has(#splash-container.hidden)::-webkit-scrollbar-thumb {
 body {
   @apply bg-light-bg-1 text-light-text-1;
   @apply dark:bg-dark-bg-1 dark:text-dark-text-1;
+  @apply overflow-x-hidden;
 }
 
 .navlink {

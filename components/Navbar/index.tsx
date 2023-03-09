@@ -3,6 +3,7 @@ import { Cairo } from "next/font/google";
 import { Menu } from "iconoir-react";
 import { useState } from "react";
 import dynamic from "next/dynamic";
+import Link from "next/link";
 
 const ThemeIcon = dynamic(() => import("./themeIcons"), {
   ssr: false,
@@ -21,7 +22,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className={cn("flex justify-center pt-12")}>
+    <nav id='navbar' className={cn("flex justify-center pt-12")}>
       <div
         className={cn(
           "flex flex-wrap  justify-between gap-x-16 p-0",
@@ -61,10 +62,19 @@ const Navbar = () => {
               "flex flex-col gap-y-4 "
             )}
           >
-            <li className='navlink'>About</li>
-            <li className='navlink'>Work</li>
-            <li className='navlink'>Skills</li>
-            <li className='navlink'>Contact</li>
+            <Link href={"/#about"}>
+              <li className='navlink'>About</li>
+            </Link>
+
+            <Link data-scroll-target='#work' href={"/#work"}>
+              <li className='navlink'>Work</li>
+            </Link>
+            <Link href={"/#skills"}>
+              <li className='navlink'>Skills</li>
+            </Link>
+            <Link href={"/#contact"}>
+              <li className='navlink'>Contact</li>
+            </Link>
             <li className='navlink'>Blog</li>
           </ul>
           <ThemeIcon />

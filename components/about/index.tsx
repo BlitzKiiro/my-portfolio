@@ -4,7 +4,7 @@ import coderImg from "@/public/assets/vectors/coder1.png";
 
 const About = () => {
   return (
-    <div id='#about' className={cn("grid grid-cols-2 gap-14")}>
+    <div id='about' className={cn("grid grid-cols-2 gap-14")}>
       <div className={cn("col-span-2 md:col-span-1")}>
         <p
           className={cn(
