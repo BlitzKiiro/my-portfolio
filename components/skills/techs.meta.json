@@ -13,7 +13,7 @@
   },
   {
     "label": "TypeScript",
-    "img": "TypeScript.svg"
+    "img": "typescript.svg"
   },
   {
     "label": "SASS",
@@ -49,7 +49,7 @@
   },
   {
     "label": "ReactQuery",
-    "img": "ReactQuery.svg"
+    "img": "reactquery.svg"
   },
   {
     "label": "Node.js",
@@ -61,7 +61,7 @@
   },
   {
     "label": "MongoDB",
-    "img": "MongoDB.svg"
+    "img": "mongodb.svg"
   },
   {
     "label": "Prisma",
