@@ -4,7 +4,7 @@ import { LinkedIn, GitHub } from "iconoir-react";
 
 const Business = () => {
   return (
-    <div className={cn("flex items-center flex-col")}>
+    <div className={cn("flex md:items-center flex-col")}>
       <p className={cn("text-light-text-2", "dark:text-dark-text-3")}>
         Professionaly or as fellow developer?
       </p>

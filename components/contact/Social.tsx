@@ -4,7 +4,7 @@ import { Facebook, Twitter, Discord } from "iconoir-react";
 
 const Social = () => {
   return (
-    <div className={cn("flex items-center flex-col")}>
+    <div className={cn("flex md:items-center flex-col")}>
       <p className={cn("text-light-text-2", "dark:text-dark-text-3")}>
         Want to connect and hangout as friends? check out my social networks
       </p>

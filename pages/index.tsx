@@ -19,7 +19,7 @@ export default function Home() {
       >
         <div
           className={cn(
-            "w-10/12",
+            "w-[90%]",
             "xl:w-[1036px]",
             "flex flex-col gap-y-[100px] md:gap-y-[150px]"
           )}

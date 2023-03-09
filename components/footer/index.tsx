@@ -6,18 +6,18 @@ const Footer = () => {
   return (
     <footer
       className={cn(
-        "flex flex-col items-center justify-center gap-3 p-10  relative"
+        "flex flex-col items-center justify-center gap-5 p-10  relative mt-10"
       )}
     >
       <p
         className={cn(
-          " font-semibold md:font-normal",
+          " text-center",
           "text-light-text-2",
           "dark:text-dark-text-2"
         )}
       >
-        Ahmed Azmy © 2023 | built with{" "}
-        <CoffeeCup className=' inline-block w-6 h-6 relative -top-1 ' />
+        Ahmed Azmy © 2023 <br /> built with{" "}
+        <CoffeeCup className=' inline-block w-5 h-5 relative -top-1 ' />
       </p>
 
       <span

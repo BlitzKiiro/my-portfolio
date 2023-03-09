@@ -9,11 +9,11 @@ const Skills = () => {
         <span className={cn("text-light-primary-1 dark:text-dark-primary-1")}>
           #{" "}
         </span>
-        Technologies I Practice
+        Techs I Practice
       </h1>
       <div
         className={cn(
-          "columns-2 md:columns-4 lg:columns-6 xl:columns-6  mt-10 "
+          "columns-3 md:columns-4 lg:columns-6 xl:columns-6  mt-10 "
         )}
       >
         {techList.map((tech, index) => {

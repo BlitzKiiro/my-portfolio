@@ -16,7 +16,7 @@ let smoothScroll = new scrollToSmooth("a", {
     // do something
   },
   onScrollEnd: (data) => {},
-  offset: "#navbar",
+  offset: "80",
 });
 
 smoothScroll.init();

@@ -37,7 +37,7 @@ const About = () => {
           className={cn(
             "text-light-text-2",
             "dark:text-dark-text-3",
-            "font-mono text-lg mt-7"
+            "font-calibre text-lg mt-7"
           )}
         >
           I’m a software engineer and a graphic designer specializing in

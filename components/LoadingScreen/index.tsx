@@ -45,7 +45,7 @@ const LoadingScreen = () => {
         <span id='name-block' className={cn("w-0 text-6xl")}>
           <span
             id='azmy'
-            className={cn("scale-0 inline-block", cairo.className)}
+            className={cn("scale-0 inline-block ", cairo.className)}
           >
             Azmy
           </span>

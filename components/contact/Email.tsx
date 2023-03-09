@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const Email = () => {
   return (
-    <div className={cn("flex items-center flex-col")}>
+    <div className={cn("flex items-start md:items-center flex-col")}>
       <h1 className='text-3xl font-bold'>
         Let&#39;s talk about your{" "}
         <span className='text-light-primary-1 dark:text-dark-primary-1'>

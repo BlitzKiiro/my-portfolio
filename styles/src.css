@@ -44,7 +44,7 @@ body {
 .navlink {
   @apply text-light-text-1;
   @apply dark:text-dark-text-1;
-  @apply font-semibold cursor-pointer transition;
+  @apply font-semibold cursor-pointer;
   @apply relative;
   @apply after:content-[''] after:block after:absolute after:-bottom-2 after:w-full after:h-[2px];
   @apply after:bg-light-primary-2 dark:after:bg-dark-primary-2;

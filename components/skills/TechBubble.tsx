@@ -17,7 +17,7 @@ const TechBubble = ({ tech }: { tech: propTypes }) => {
       <div
         className={cn(
           "group",
-          "w-[100px] h-[100px] ",
+          "w-[75px] h-[75px] md:w-[100px] md:h-[100px] ",
           "group-hover:scale-[1.25] scale-[1] duration-300 hover:z-10 transition"
         )}
       >
