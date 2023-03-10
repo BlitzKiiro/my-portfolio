@@ -4,34 +4,34 @@ import Link from "next/link";
 
 const Footer = () => {
   return (
-    <footer
-      className={cn(
-        "flex flex-col items-center justify-center gap-5 p-10  relative mt-10"
-      )}
-    >
-      <p
+    <footer className={cn("flex justify-center p-10")}>
+      <div
         className={cn(
-          " text-center",
+          "flex flex-col items-center gap-y-2",
+          "md:flex-row  md:justify-between",
+          "w-11/12",
+          "xl:w-[920px]",
+          " text-sm",
           "text-light-text-2",
-          "dark:text-dark-text-2"
+          "dark:text-dark-text-3"
         )}
       >
-        Ahmed Azmy © 2023 <br /> built with{" "}
-        <CoffeeCup className=' inline-block w-5 h-5 relative -top-1 ' />
-      </p>
+        <p>© 2023 Ahmed Azmy</p>
 
-      <span
-        className={cn(
-          "text-sm font-semibold",
-          "text-light-text-2",
-          "dark:text-dark-text-2",
-          "block md:absolute md:right-24 "
-        )}
-      >
-        <Link href={"/#"}>
-          <NavArrowUp className='w-6 h-6 inline-block' /> Back to top
-        </Link>
-      </span>
+        <span
+          className={cn(
+            "text-sm font-semibold md:font-normal",
+            "text-light-text-1 md:text-inherit",
+            "dark:text-dark-text-2 md:text-inherit",
+            "block "
+          )}
+        >
+          <Link href={"/#"}>
+            <NavArrowUp className='w-6 h-6 inline-block font-bold stroke-[2.5]' />{" "}
+            Back To Top
+          </Link>
+        </span>
+      </div>
     </footer>
   );
 };

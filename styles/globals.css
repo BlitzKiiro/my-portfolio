@@ -631,6 +631,10 @@ video {
   height: 2.5rem;
 }
 
+.h-12 {
+  height: 3rem;
+}
+
 .h-5 {
   height: 1.25rem;
 }
@@ -651,8 +655,8 @@ video {
   height: 100%;
 }
 
-.h-4 {
-  height: 1rem;
+.h-7 {
+  height: 1.75rem;
 }
 
 .\!max-h-\[1000px\] {
@@ -673,6 +677,14 @@ video {
 
 .w-10\/12 {
   width: 83.333333%;
+}
+
+.w-11\/12 {
+  width: 91.666667%;
+}
+
+.w-12 {
+  width: 3rem;
 }
 
 .w-5 {
@@ -699,8 +711,8 @@ video {
   width: 100%;
 }
 
-.w-4 {
-  width: 1rem;
+.w-7 {
+  width: 1.75rem;
 }
 
 .basis-full {
@@ -776,10 +788,6 @@ video {
   gap: 0.75rem;
 }
 
-.gap-5 {
-  gap: 1.25rem;
-}
-
 .gap-7 {
   gap: 1.75rem;
 }
@@ -823,6 +831,10 @@ video {
   row-gap: 100px;
 }
 
+.gap-y-2 {
+  row-gap: 0.5rem;
+}
+
 .overflow-hidden {
   overflow: hidden;
 }
@@ -861,6 +873,18 @@ video {
 .bg-light-container-4 {
   --tw-bg-opacity: 1;
   background-color: rgb(222 226 230 / var(--tw-bg-opacity));
+}
+
+.stroke-\[3\] {
+  stroke-width: 3;
+}
+
+.stroke-2 {
+  stroke-width: 2;
+}
+
+.stroke-\[2\.5\] {
+  stroke-width: 2.5;
 }
 
 .object-contain {
@@ -909,10 +933,6 @@ video {
 
 .font-mono {
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-}
-
-.\!font-calibre {
-  font-family: calibre !important;
 }
 
 .text-2xl {
@@ -991,6 +1011,11 @@ video {
 .text-light-text-2 {
   --tw-text-opacity: 1;
   color: rgb(73 80 87 / var(--tw-text-opacity));
+}
+
+.text-light-text-3 {
+  --tw-text-opacity: 1;
+  color: rgb(134 142 150 / var(--tw-text-opacity));
 }
 
 .grayscale {
@@ -1290,14 +1315,6 @@ body {
 }
 
 @media (min-width: 768px) {
-  .md\:absolute {
-    position: absolute;
-  }
-
-  .md\:right-24 {
-    right: 6rem;
-  }
-
   .md\:order-first {
     order: -9999;
   }
@@ -1402,6 +1419,14 @@ body {
     font-size: 4.5rem;
     line-height: 1;
   }
+
+  .md\:font-normal {
+    font-weight: 400;
+  }
+
+  .md\:text-inherit {
+    color: inherit;
+  }
 }
 
 @media (min-width: 1024px) {
@@ -1414,6 +1439,18 @@ body {
 @media (min-width: 1280px) {
   .xl\:w-\[1036px\] {
     width: 1036px;
+  }
+
+  .xl\:w-\[800px\] {
+    width: 800px;
+  }
+
+  .xl\:w-\[900px\] {
+    width: 900px;
+  }
+
+  .xl\:w-\[920px\] {
+    width: 920px;
   }
 
   .xl\:columns-6 {
