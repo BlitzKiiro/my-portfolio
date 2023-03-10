@@ -5,7 +5,7 @@ import { lightAnimation, darkAnimation } from "./animations";
 import { useTheme } from "next-themes";
 
 const ThemeIcon = () => {
-  const { theme, setTheme } = useTheme();
+  const { resolvedTheme: theme, setTheme } = useTheme();
 
   const toggleMode = async () => {
     if (theme == "dark") {
@@ -22,6 +22,7 @@ const ThemeIcon = () => {
       lightAnimation();
     }
   }, [theme]);
+
   return (
     <button
       className={cn(
