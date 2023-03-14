@@ -26,7 +26,7 @@ const Footer = () => {
             "block "
           )}
         >
-          <Link href={"/#"}>
+          <Link href={"#"}>
             <NavArrowUp className='w-6 h-6 inline-block font-bold stroke-[2.5]' />{" "}
             Back To Top
           </Link>
