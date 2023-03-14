@@ -32,15 +32,17 @@ const Navbar = () => {
         )}
       >
         {/* logo */}
-        <div
-          className={cn(
-            "cursor-pointer font-semibold text-2xl",
-            "text-light-text-1",
-            "dark:text-dark-text-1"
-          )}
-        >
-          ahmedAzmy
-        </div>
+        <Link href={"/"}>
+          <span
+            className={cn(
+              "cursor-pointer font-semibold text-2xl",
+              "text-light-text-1",
+              "dark:text-dark-text-1"
+            )}
+          >
+            ahmedAzmy
+          </span>
+        </Link>
         {/* bars icon  */}
         <div onClick={toggleMenu} className={cn(" inline", "md:hidden")}>
           <Menu className={cn("w-8 h-8")} />
