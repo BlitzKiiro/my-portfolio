@@ -10,9 +10,6 @@ export default function Home() {
     <>
       <Head>
         <title>Ahmed Azmy</title>
-        <meta name='description' content='Ahmed Azmy website & portfolio' />
-        <meta name='viewport' content='width=device-width, initial-scale=1' />
-        <link rel='icon' href='/favicon.ico' />
       </Head>
       <main
         className={cn("flex flex-col items-center my-[25px] md:my-[200px]")}
