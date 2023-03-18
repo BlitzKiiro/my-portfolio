@@ -29,7 +29,8 @@ const ThemeIcon = () => {
         " w-10 h-10 rounded-full ",
         "hover:bg-light-container-3",
         "dark:hover:bg-dark-container-3",
-        "flex items-center justify-center"
+        "flex items-center justify-center",
+        "cursor-default lg:cursor-pointer"
       )}
       onClick={toggleMode}
     >
