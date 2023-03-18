@@ -11,7 +11,7 @@ const TechBubble = ({ tech }: { tech: propTypes }) => {
   return (
     <div
       className={cn(
-        "flex justify-center items-center w-full mb-10 relative group cursor-pointer"
+        "flex justify-center items-center w-full mb-10 relative group lg:cursor-pointer"
       )}
     >
       <div
