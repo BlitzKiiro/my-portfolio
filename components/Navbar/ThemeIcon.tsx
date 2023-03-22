@@ -35,9 +35,9 @@ const ThemeIcon = () => {
       onClick={toggleMode}
     >
       {theme == "dark" ? (
-        <HalfMoon id='moon' className='h-8 w-8' />
+        <HalfMoon id='moon' className='h-8 w-8 md:h-6 md:w-6' />
       ) : (
-        <SunLight id='sun' className='h-8 w-8' />
+        <SunLight id='sun' className='h-8 w-8 md:h-6 md:w-6' />
       )}
     </button>
   );

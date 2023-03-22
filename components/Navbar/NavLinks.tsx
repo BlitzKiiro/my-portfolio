@@ -7,7 +7,7 @@ const NavLinks = ({ toggleMenu }: { toggleMenu: MouseEventHandler }) => {
     <ul
       className={cn(
         "md:flex-row md:items-center md:gap-x-12 ",
-        "flex flex-col gap-y-8 mb-8",
+        "flex flex-col gap-y-8 mb-8 md:mb-0",
         "text-xl md:text-base"
       )}
       onClickCapture={toggleMenu}
