@@ -1,13 +1,16 @@
 import cn from "classnames";
 import Link from "next/link";
+import { MouseEventHandler } from "react";
 
-const NavLinks = () => {
+const NavLinks = ({ toggleMenu }: { toggleMenu: MouseEventHandler }) => {
   return (
     <ul
       className={cn(
         "md:flex-row md:items-center md:gap-x-12 ",
-        "flex flex-col gap-y-4 "
+        "flex flex-col gap-y-8 mb-8",
+        "text-xl md:text-base"
       )}
+      onClickCapture={toggleMenu}
     >
       <Link href={"/#about"}>
         <li className='navlink'>About</li>

@@ -4,6 +4,7 @@ import dynamic from "next/dynamic";
 import Brand from "./Brand";
 import NavLinks from "./NavLinks";
 import MenuButton from "./MenuButton";
+import Overlay from "./Overlay";
 
 const ThemeIcon = dynamic(() => import("./ThemeIcon"), {
   ssr: false,
@@ -17,29 +18,28 @@ const Navbar = () => {
   };
 
   return (
-    <nav id='navbar' className={cn("flex justify-center pt-12")}>
+    <nav id='navbar' className={cn("flex justify-center mb-[112px] pt-12")}>
       <div
         className={cn(
-          "flex flex-wrap  justify-between gap-x-16 p-0",
-          "md:flex-nowrap",
-          "w-10/12",
-          "xl:w-[1036px]"
+          "flex flex-wrap md:flex-nowrap justify-between gap-x-16 p-0",
+          "w-10/12 xl:w-[1036px]"
         )}
       >
         <Brand />
         <MenuButton menuIsVisible={menuIsVisible} toggleMenu={toggleMenu} />
-        {/* line break */}
         <div className={cn("basis-full", "md:hidden")}></div>
-        {/* links & buttons*/}
+        <Overlay menuIsVisible={menuIsVisible} />
         <div
           className={cn(
-            { "!max-h-[1000px]": menuIsVisible },
-            "transition-all duration-300 ease-in-out",
-            "flex flex-col items-center text-center w-full my-10 gap-y-6 max-h-0 overflow-hidden",
-            "md:flex-row md:justify-between md:my-0 md:max-h-full"
+            { "!top-0": menuIsVisible },
+            "transition-all duration-700  ",
+            "fixed left-0 -top-[100%] w-full h-full overflow-hidden",
+            "flex flex-col justify-center items-center text-center w-full  gap-y-6",
+            "md:flex-row md:justify-between",
+            "md:relative md:top-0 md:left-0  "
           )}
         >
-          <NavLinks />
+          <NavLinks toggleMenu={toggleMenu} />
           <ThemeIcon />
         </div>
       </div>

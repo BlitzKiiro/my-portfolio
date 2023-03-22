@@ -7,13 +7,17 @@ interface propsTypes {
 }
 
 const barline =
-  "w-7 h-0.5 rounded-md bg-light-text-1 dark:bg-dark-text-1 transition ease duration-300 ";
+  "w-7 h-0.5 rounded-md bg-light-text-1 dark:bg-dark-text-1 transition ease-in-out duration-300 ";
 
 const MenuButton = ({ toggleMenu, menuIsVisible }: propsTypes) => {
   return (
     <button
       onClick={toggleMenu}
-      className={cn("flex flex-col gap-y-2  relative w-8 h-8", "md:hidden")}
+      className={cn(
+        "flex flex-col gap-y-2 relative z-20 w-8 h-8",
+        "md:hidden",
+        { "!fixed right-8": menuIsVisible }
+      )}
     >
       <div
         className={cn(barline, { "rotate-45 translate-y-2.5": menuIsVisible })}
