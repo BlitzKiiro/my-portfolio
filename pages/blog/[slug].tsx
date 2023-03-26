@@ -65,6 +65,10 @@ const Blog = ({ blog }: { blog: BlogPost }) => {
     <>
       <Head>
         <title>{blog.fields.title}</title>
+        <meta
+          property='og:image'
+          content={"https:" + blog.fields.thumbnail.fields.file.url}
+        />
       </Head>
       <main className={cn("flex  justify-center my-[25px] md:my-[128px]")}>
         <div className={cn("w-[90%]", "xl:w-[1036px]", "flex flex-col")}>
