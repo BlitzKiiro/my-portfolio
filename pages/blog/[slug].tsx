@@ -73,9 +73,11 @@ const Blog = ({ blog }: { blog: BlogPost }) => {
           content={"https:" + blog.fields.thumbnail.fields.file.url}
         />
       </Head>
-      <main className={cn("flex  justify-center my-[25px] md:my-[128px]")}>
+      <main className={cn("flex  justify-center my-[25px] md:my-[160px]")}>
         <div className={cn("w-[90%]", "xl:w-[1036px]", "flex flex-col")}>
-          <h1 className='text-5xl font-bold mb-4'>{blog.fields.title}</h1>
+          <h1 className='text-3xl md:text-5xl font-bold mb-4'>
+            {blog.fields.title}
+          </h1>
           <span className='flex gap-x-2 text-light-text-2 dark:text-dark-text-3'>
             <p>{format(new Date(blog.sys.createdAt), "yyyy-MM-dd")}</p>—
             {blog.metadata.tags.map((tag, i) => (
@@ -89,7 +91,7 @@ const Blog = ({ blog }: { blog: BlogPost }) => {
             width={blog.fields.thumbnail.fields.file.details.image?.width}
             height={blog.fields.thumbnail.fields.file.details.image?.height}
           />
-          <div className='my-20'>
+          <div className='my-16'>
             {documentToReactComponents(
               blog.fields.content,
               richTextRenderOptions

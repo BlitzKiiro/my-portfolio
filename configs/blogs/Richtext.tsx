@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { BLOCKS, Node } from "@contentful/rich-text-types";
 import { Link as LinkIcon, Quote } from "iconoir-react";
-import { ReactElement, ReactNode } from "react";
+import { ReactNode } from "react";
 import cn from "classnames";
 
 const richTextRenderOptions = {
@@ -10,7 +10,7 @@ const richTextRenderOptions = {
       return (
         <p
           className={cn(
-            "my-3 inline !text-[20px] whitespace-pre-wrap",
+            "my-3 inline !text-[18px] whitespace-pre-wrap",
             "dark:text-dark-text-2 text-light-text-2"
           )}
         >
@@ -21,7 +21,7 @@ const richTextRenderOptions = {
     [BLOCKS.EMBEDDED_ASSET]: (node: Node) => {
       return (
         <Image
-          className='my-4'
+          className='my-6'
           src={"https:" + node.data.target.fields.file.url}
           height={node.data.target.fields.file.details.image.height}
           width={node.data.target.fields.file.details.image.width}
@@ -31,25 +31,27 @@ const richTextRenderOptions = {
     },
     [BLOCKS.HEADING_1]: (node: Node, children: ReactNode) => {
       return (
-        <h1 className='text-4xl my-10'>
+        <h1 className='text-2xl md:text-4xl my-10'>
           <LinkIcon className='inline-block text-base' /> {children}
         </h1>
       );
     },
     [BLOCKS.HEADING_2]: (node: Node, children: ReactNode) => {
-      return <h2 className='text-3xl my-8'>{children}</h2>;
+      return <h2 className='text-2xl md:text-3xl my-8'>{children}</h2>;
     },
     [BLOCKS.HEADING_3]: (node: Node, children: ReactNode) => {
-      return <h3 className='text-2xl my-7 '>{children}</h3>;
+      return <h3 className='text-xl md:text-2xl my-7 '>{children}</h3>;
     },
     [BLOCKS.HEADING_4]: (node: Node, children: ReactNode) => {
-      return <h4 className='text-xl my-6'>{children}</h4>;
+      return <h4 className='text-lg md:text-xl my-6'>{children}</h4>;
     },
     [BLOCKS.HEADING_5]: (node: Node, children: ReactNode) => {
-      return <h5 className='text-lg my-5'>{children}</h5>;
+      return <h5 className='text-base md:text-lg my-5'>{children}</h5>;
     },
     [BLOCKS.HEADING_6]: (node: Node, children: ReactNode) => {
-      return <p className='text-sm text-transparent'>{children}</p>;
+      return (
+        <p className='text-sm md:text-base text-transparent'>{children}</p>
+      );
     },
     [BLOCKS.QUOTE]: (node: Node, children: ReactNode) => {
       return (

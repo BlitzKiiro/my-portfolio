@@ -589,6 +589,11 @@ video {
   grid-column: span 5 / span 5;
 }
 
+.mx-2 {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+
 .my-10 {
   margin-top: 2.5rem;
   margin-bottom: 2.5rem;
@@ -602,6 +607,11 @@ video {
 .my-20 {
   margin-top: 5rem;
   margin-bottom: 5rem;
+}
+
+.my-3 {
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
 }
 
 .my-4 {
@@ -619,16 +629,6 @@ video {
   margin-bottom: 1.5rem;
 }
 
-.my-\[25px\] {
-  margin-top: 25px;
-  margin-bottom: 25px;
-}
-
-.mx-2 {
-  margin-left: 0.5rem;
-  margin-right: 0.5rem;
-}
-
 .my-7 {
   margin-top: 1.75rem;
   margin-bottom: 1.75rem;
@@ -639,9 +639,14 @@ video {
   margin-bottom: 2rem;
 }
 
-.my-3 {
-  margin-top: 0.75rem;
-  margin-bottom: 0.75rem;
+.my-\[25px\] {
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+.my-16 {
+  margin-top: 4rem;
+  margin-bottom: 4rem;
 }
 
 .mb-10 {
@@ -1041,10 +1046,6 @@ video {
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
-.\!text-\[12px\] {
-  font-size: 12px !important;
-}
-
 .\!text-\[20px\] {
   font-size: 20px !important;
 }
@@ -1104,6 +1105,10 @@ video {
   line-height: 1rem;
 }
 
+.\!text-\[18px\] {
+  font-size: 18px !important;
+}
+
 .font-bold {
   font-weight: 700;
 }
@@ -1134,11 +1139,6 @@ video {
 .text-light-text-2 {
   --tw-text-opacity: 1;
   color: rgb(73 80 87 / var(--tw-text-opacity));
-}
-
-.text-light-text-3 {
-  --tw-text-opacity: 1;
-  color: rgb(134 142 150 / var(--tw-text-opacity));
 }
 
 .text-transparent {
@@ -1504,6 +1504,11 @@ body {
     margin-bottom: 200px;
   }
 
+  .md\:my-\[160px\] {
+    margin-top: 160px;
+    margin-bottom: 160px;
+  }
+
   .md\:mb-0 {
     margin-bottom: 0px;
   }
@@ -1588,6 +1593,36 @@ body {
     line-height: 1.5rem;
   }
 
+  .md\:text-5xl {
+    font-size: 3rem;
+    line-height: 1;
+  }
+
+  .md\:text-4xl {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
+
+  .md\:text-2xl {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+
+  .md\:text-3xl {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+  }
+
+  .md\:text-lg {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+
+  .md\:text-xl {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+
   .md\:font-normal {
     font-weight: 400;
   }
@@ -1615,6 +1650,10 @@ body {
 
   .xl\:w-\[920px\] {
     width: 920px;
+  }
+
+  .xl\:w-\[750px\] {
+    width: 750px;
   }
 
   .xl\:columns-6 {
