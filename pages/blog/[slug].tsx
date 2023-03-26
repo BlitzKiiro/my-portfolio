@@ -67,10 +67,7 @@ const Blog = ({ blog }: { blog: BlogPost }) => {
       <Head>
         <title>{blog.fields.title}</title>
         <meta property='og:title' content={blog.fields.title} />
-        <meta
-          property='og:description '
-          content={blog.fields.metaDescription}
-        />
+        <meta property='og:description' content={blog.fields.metaDescription} />
         <meta
           property='og:image'
           content={"https:" + blog.fields.thumbnail.fields.file.url}
