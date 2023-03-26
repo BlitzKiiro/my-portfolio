@@ -1,31 +1,13 @@
 import Head from "next/head";
 import Image from "next/image";
-import Contentful, { createClient } from "contentful";
 import { GetStaticPropsContext } from "next";
+import Client from "@/configs/blogs/ContentfulClient";
+import { BlogPost, Fields } from "@/common/types/blog";
+import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
+import richTextRenderOptions from "@/configs/blogs/Richtext";
 import cn from "classnames";
 import { format } from "date-fns";
-import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
-import { Document } from "@contentful/rich-text-types";
-import richTextRenderOptions from "@/configs/blogs/Richtext";
-
-interface Fields {
-  title: Contentful.EntryFields.Text;
-  metaDescription: Contentful.EntryFields.Text;
-  slug: Contentful.EntryFields.Text;
-  content: Document;
-  thumbnail: Contentful.Asset;
-}
-
-interface BlogPost {
-  fields: Fields;
-  metadata: Contentful.Metadata;
-  sys: Contentful.Sys;
-}
-
-const Client = createClient({
-  space: process.env.CONTENTFUL_SPACE_ID as string,
-  accessToken: process.env.CONTENTFUL_ACCESS_TOKEN as string,
-});
+import Skeleton from "@/components/skeleton";
 
 export async function getStaticPaths() {
   const { items } = await Client.getEntries({
@@ -61,7 +43,17 @@ export async function getStaticProps(context: GetStaticPropsContext) {
   };
 }
 const Blog = ({ blog }: { blog: BlogPost }) => {
-  if (!blog) return <></>;
+  if (!blog)
+    return (
+      <>
+        <Head>
+          <title>Ahmed Azmy blog</title>
+        </Head>
+        <main>
+          <Skeleton />
+        </main>
+      </>
+    );
   return (
     <>
       <Head>
