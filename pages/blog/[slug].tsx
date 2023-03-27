@@ -2,7 +2,7 @@ import Head from "next/head";
 import Image from "next/image";
 import { GetStaticPropsContext } from "next";
 import Client from "@/configs/blogs/ContentfulClient";
-import { BlogPost, Fields } from "@/common/types/blog";
+import { BlogPost } from "@/common/types/blog";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import richTextRenderOptions from "@/configs/blogs/Richtext";
 import cn from "classnames";
@@ -10,11 +10,13 @@ import { format } from "date-fns";
 import Skeleton from "@/components/skeleton";
 
 export async function getStaticPaths() {
-  const { items } = await Client.getEntries({
-    content_type: "blogs",
-  });
+  const items = (
+    await Client.getEntries({
+      content_type: "blogs",
+    })
+  ).items as BlogPost[];
   const paths = items.map((item) => {
-    return { params: { slug: (item.fields as Fields).slug } };
+    return { params: { slug: item.fields.slug } };
   });
   return { paths, fallback: true };
 }
