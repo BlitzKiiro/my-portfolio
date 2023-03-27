@@ -25,19 +25,9 @@ const NavLinks = ({ toggleMenu }: { toggleMenu: MouseEventHandler }) => {
       <Link href={"/#contact"}>
         <li className='navlink'>Contact</li>
       </Link>
-      <span className='flex items-center gap-x-1'>
-        <li className='navlink'>Blog </li>
-        <span
-          className={cn(
-            "dark:bg-dark-container-2 dark:text-dark-text-2",
-            "bg-light-container-3 text-light-text-2 text-xs",
-            "px-2 rounded-xl",
-            "inline-block "
-          )}
-        >
-          soon
-        </span>
-      </span>
+      <Link href={"/blog"}>
+        <li className='navlink'>Blog</li>
+      </Link>
     </ul>
   );
 };
