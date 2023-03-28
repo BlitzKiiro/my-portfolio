@@ -32,8 +32,8 @@ const Navbar = () => {
         <div
           className={cn(
             { "!top-0": menuIsVisible },
-            "transition-all duration-700  ",
-            "fixed left-0 -top-[100%] w-full h-full overflow-hidden",
+            "transition-all duration-700 ",
+            "fixed left-0 -top-[100%] w-full h-full overflow-hidden z-10",
             "flex flex-col justify-center items-center text-center w-full  gap-y-6",
             "md:flex-row md:justify-between",
             "md:relative md:top-0 md:left-0  "
