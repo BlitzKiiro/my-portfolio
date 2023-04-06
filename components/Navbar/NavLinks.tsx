@@ -12,20 +12,20 @@ const NavLinks = ({ toggleMenu }: { toggleMenu: MouseEventHandler }) => {
       )}
       onClickCapture={toggleMenu}
     >
-      <Link href={"/#about"}>
+      <Link href={"/#about"} passHref>
         <li className='navlink'>About</li>
       </Link>
 
-      <Link data-scroll-target='#work' href={"/#work"}>
+      <Link href={"/#work"} passHref>
         <li className='navlink'>Work</li>
       </Link>
-      <Link href={"/#skills"}>
+      <Link href={"/#skills"} passHref>
         <li className='navlink'>Skills</li>
       </Link>
-      <Link href={"/#contact"}>
+      <Link href={"/#contact"} passHref>
         <li className='navlink'>Contact</li>
       </Link>
-      <Link href={"/blog"}>
+      <Link href={"/blog"} passHref>
         <li className='navlink'>Blog</li>
       </Link>
     </ul>
