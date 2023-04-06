@@ -12,20 +12,20 @@ const NavLinks = ({ toggleMenu }: { toggleMenu: MouseEventHandler }) => {
       )}
       onClickCapture={toggleMenu}
     >
-      <Link href={"/#about"} passHref>
+      <Link href={"/#about"} prefetch={false} passHref>
         <li className='navlink'>About</li>
       </Link>
 
-      <Link href={"/#work"} passHref>
+      <Link href={"/#work"} prefetch={false} passHref>
         <li className='navlink'>Work</li>
       </Link>
-      <Link href={"/#skills"} passHref>
+      <Link href={"/#skills"} prefetch={false} passHref>
         <li className='navlink'>Skills</li>
       </Link>
-      <Link href={"/#contact"} passHref>
+      <Link href={"/#contact"} prefetch={false} passHref>
         <li className='navlink'>Contact</li>
       </Link>
-      <Link href={"/blog"} passHref>
+      <Link href={"/blog"} prefetch={false} passHref>
         <li className='navlink'>Blog</li>
       </Link>
     </ul>
