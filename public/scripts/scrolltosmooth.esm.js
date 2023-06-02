@@ -1,8 +1,8 @@
 /*!
-* ScrollToSmooth
-* Author: Bastian Fießinger
-* Version: 3.0.2
-*/
+ * ScrollToSmooth
+ * Author: Bastian Fießinger
+ * Version: 3.0.2
+ */
 function _typeof(obj) {
   "@babel/helpers - typeof";
 
@@ -12,7 +12,12 @@ function _typeof(obj) {
     };
   } else {
     _typeof = function (obj) {
-      return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj;
+      return obj &&
+        typeof Symbol === "function" &&
+        obj.constructor === Symbol &&
+        obj !== Symbol.prototype
+        ? "symbol"
+        : typeof obj;
     };
   }
 
@@ -47,7 +52,7 @@ function _defineProperty(obj, key, value) {
       value: value,
       enumerable: true,
       configurable: true,
-      writable: true
+      writable: true,
     });
   } else {
     obj[key] = value;
@@ -57,7 +62,12 @@ function _defineProperty(obj, key, value) {
 }
 
 function _slicedToArray(arr, i) {
-  return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest();
+  return (
+    _arrayWithHoles(arr) ||
+    _iterableToArrayLimit(arr, i) ||
+    _unsupportedIterableToArray(arr, i) ||
+    _nonIterableRest()
+  );
 }
 
 function _arrayWithHoles(arr) {
@@ -65,14 +75,19 @@ function _arrayWithHoles(arr) {
 }
 
 function _iterableToArrayLimit(arr, i) {
-  if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return;
+  if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr)))
+    return;
   var _arr = [];
   var _n = true;
   var _d = false;
   var _e = undefined;
 
   try {
-    for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) {
+    for (
+      var _i = arr[Symbol.iterator](), _s;
+      !(_n = (_s = _i.next()).done);
+      _n = true
+    ) {
       _arr.push(_s.value);
 
       if (i && _arr.length === i) break;
@@ -97,7 +112,8 @@ function _unsupportedIterableToArray(o, minLen) {
   var n = Object.prototype.toString.call(o).slice(8, -1);
   if (n === "Object" && o.constructor) n = o.constructor.name;
   if (n === "Map" || n === "Set") return Array.from(o);
-  if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen);
+  if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n))
+    return _arrayLikeToArray(o, minLen);
 }
 
 function _arrayLikeToArray(arr, len) {
@@ -109,16 +125,18 @@ function _arrayLikeToArray(arr, len) {
 }
 
 function _nonIterableRest() {
-  throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
+  throw new TypeError(
+    "Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."
+  );
 }
 
 /**
  * linear
- * 
+ *
  * @param {number} t represents the absolute progress of the animation in the bounds of 0 (beginning of the animation) and 1 (end of animation).
- * 
+ *
  * @return {number} timing function
- * 
+ *
  * @since 3.0.0
  */
 var linear = function linear(t) {
@@ -127,11 +145,11 @@ var linear = function linear(t) {
 
 /**
  * easeInQuad
- * 
+ *
  * @param {number} t represents the absolute progress of the animation in the bounds of 0 (beginning of the animation) and 1 (end of animation).
- * 
+ *
  * @return {number} timing function
- * 
+ *
  * @since 3.0.0
  */
 var easeInQuad = function easeInQuad(t) {
@@ -140,11 +158,11 @@ var easeInQuad = function easeInQuad(t) {
 
 /**
  * easeOutQuad
- * 
+ *
  * @param {number} t represents the absolute progress of the animation in the bounds of 0 (beginning of the animation) and 1 (end of animation).
- * 
+ *
  * @return {number} timing function
- * 
+ *
  * @since 3.0.0
  */
 var easeOutQuad = function easeOutQuad(t) {
@@ -153,11 +171,11 @@ var easeOutQuad = function easeOutQuad(t) {
 
 /**
  * easeInOutQuad
- * 
+ *
  * @param {number} t represents the absolute progress of the animation in the bounds of 0 (beginning of the animation) and 1 (end of animation).
- * 
+ *
  * @return {number} timing function
- * 
+ *
  * @since 3.0.0
  */
 var easeInOutQuad = function easeInOutQuad(t) {
@@ -166,11 +184,11 @@ var easeInOutQuad = function easeInOutQuad(t) {
 
 /**
  * easeInCubic
- * 
+ *
  * @param {number} t represents the absolute progress of the animation in the bounds of 0 (beginning of the animation) and 1 (end of animation).
- * 
+ *
  * @return {number} timing function
- * 
+ *
  * @since 3.0.0
  */
 var easeInCubic = function easeInCubic(t) {
@@ -179,11 +197,11 @@ var easeInCubic = function easeInCubic(t) {
 
 /**
  * easeOutCubic
- * 
+ *
  * @param {number} t represents the absolute progress of the animation in the bounds of 0 (beginning of the animation) and 1 (end of animation).
- * 
+ *
  * @return {number} timing function
- * 
+ *
  * @since 3.0.0
  */
 var easeOutCubic = function easeOutCubic(t) {
@@ -192,11 +210,11 @@ var easeOutCubic = function easeOutCubic(t) {
 
 /**
  * easeInOutCubic
- * 
+ *
  * @param {number} t represents the absolute progress of the animation in the bounds of 0 (beginning of the animation) and 1 (end of animation).
- * 
+ *
  * @return {number} timing function
- * 
+ *
  * @since 3.0.0
  */
 var easeInOutCubic = function easeInOutCubic(t) {
@@ -205,11 +223,11 @@ var easeInOutCubic = function easeInOutCubic(t) {
 
 /**
  * easeInQuart
- * 
+ *
  * @param {number} t represents the absolute progress of the animation in the bounds of 0 (beginning of the animation) and 1 (end of animation).
- * 
+ *
  * @return {number} timing function
- * 
+ *
  * @since 3.0.0
  */
 var easeInQuart = function easeInQuart(t) {
@@ -218,11 +236,11 @@ var easeInQuart = function easeInQuart(t) {
 
 /**
  * easeOutQuart
- * 
+ *
  * @param {number} t represents the absolute progress of the animation in the bounds of 0 (beginning of the animation) and 1 (end of animation).
- * 
+ *
  * @return {number} timing function
- * 
+ *
  * @since 3.0.0
  */
 var easeOutQuart = function easeOutQuart(t) {
@@ -231,11 +249,11 @@ var easeOutQuart = function easeOutQuart(t) {
 
 /**
  * easeInOutQuart
- * 
+ *
  * @param {number} t represents the absolute progress of the animation in the bounds of 0 (beginning of the animation) and 1 (end of animation).
- * 
+ *
  * @return {number} timing function
- * 
+ *
  * @since 3.0.0
  */
 var easeInOutQuart = function easeInOutQuart(t) {
@@ -244,11 +262,11 @@ var easeInOutQuart = function easeInOutQuart(t) {
 
 /**
  * easeInQuint
- * 
+ *
  * @param {number} t represents the absolute progress of the animation in the bounds of 0 (beginning of the animation) and 1 (end of animation).
- * 
+ *
  * @return {number} timing function
- * 
+ *
  * @since 3.0.0
  */
 var easeInQuint = function easeInQuint(t) {
@@ -257,11 +275,11 @@ var easeInQuint = function easeInQuint(t) {
 
 /**
  * easeOutQuint
- * 
+ *
  * @param {number} t represents the absolute progress of the animation in the bounds of 0 (beginning of the animation) and 1 (end of animation).
- * 
+ *
  * @return {number} timing function
- * 
+ *
  * @since 3.0.0
  */
 var easeOutQuint = function easeOutQuint(t) {
@@ -270,50 +288,50 @@ var easeOutQuint = function easeOutQuint(t) {
 
 /**
  * easeInOutQuint
- * 
+ *
  * @param {number} t represents the absolute progress of the animation in the bounds of 0 (beginning of the animation) and 1 (end of animation).
- * 
+ *
  * @return {number} timing function
- * 
+ *
  * @since 3.0.0
  */
 var easeInOutQuint = function easeInOutQuint(t) {
-  return t < .5 ? 16 * t * t * t * t * t : 1 + 16 * --t * t * t * t * t;
+  return t < 0.5 ? 16 * t * t * t * t * t : 1 + 16 * --t * t * t * t * t;
 };
 
 /**
  * easeInSine
- * 
+ *
  * @param {number} t represents the absolute progress of the animation in the bounds of 0 (beginning of the animation) and 1 (end of animation).
- * 
+ *
  * @return {number} timing function
- * 
+ *
  * @since 3.0.0
  */
 var easeInSine = function easeInSine(t) {
-  return 1 - Math.cos(t * Math.PI / 2);
+  return 1 - Math.cos((t * Math.PI) / 2);
 };
 
 /**
  * easeOutSine
- * 
+ *
  * @param {number} t represents the absolute progress of the animation in the bounds of 0 (beginning of the animation) and 1 (end of animation).
- * 
+ *
  * @return {number} timing function
- * 
+ *
  * @since 3.0.0
  */
 var easeOutSine = function easeOutSine(t) {
-  return Math.sin(t * Math.PI / 2);
+  return Math.sin((t * Math.PI) / 2);
 };
 
 /**
  * easeInOutSine
- * 
+ *
  * @param {number} t represents the absolute progress of the animation in the bounds of 0 (beginning of the animation) and 1 (end of animation).
- * 
+ *
  * @return {number} timing function
- * 
+ *
  * @since 3.0.0
  */
 var easeInOutSine = function easeInOutSine(t) {
@@ -322,11 +340,11 @@ var easeInOutSine = function easeInOutSine(t) {
 
 /**
  * easeInExpo
- * 
+ *
  * @param {number} t represents the absolute progress of the animation in the bounds of 0 (beginning of the animation) and 1 (end of animation).
- * 
+ *
  * @return {number} timing function
- * 
+ *
  * @since 3.0.0
  */
 var easeInExpo = function easeInExpo(t) {
@@ -335,11 +353,11 @@ var easeInExpo = function easeInExpo(t) {
 
 /**
  * easeInOutQuart
- * 
+ *
  * @param {number} t represents the absolute progress of the animation in the bounds of 0 (beginning of the animation) and 1 (end of animation).
- * 
+ *
  * @return {number} timing function
- * 
+ *
  * @since 3.0.0
  */
 var easeOutExpo = function easeOutExpo(t) {
@@ -348,24 +366,30 @@ var easeOutExpo = function easeOutExpo(t) {
 
 /**
  * easeInOutExpo
- * 
+ *
  * @param {number} t represents the absolute progress of the animation in the bounds of 0 (beginning of the animation) and 1 (end of animation).
- * 
+ *
  * @return {number} timing function
- * 
+ *
  * @since 3.0.0
  */
 var easeInOutExpo = function easeInOutExpo(t) {
-  return t === 0 ? 0 : t === 1 ? 1 : t < 0.5 ? Math.pow(2, 20 * t - 10) / 2 : (2 - Math.pow(2, -20 * t + 10)) / 2;
+  return t === 0
+    ? 0
+    : t === 1
+    ? 1
+    : t < 0.5
+    ? Math.pow(2, 20 * t - 10) / 2
+    : (2 - Math.pow(2, -20 * t + 10)) / 2;
 };
 
 /**
  * easeInCirc
- * 
+ *
  * @param {number} t represents the absolute progress of the animation in the bounds of 0 (beginning of the animation) and 1 (end of animation).
- * 
+ *
  * @return {number} timing function
- * 
+ *
  * @since 3.0.0
  */
 var easeInCirc = function easeInCirc(t) {
@@ -374,11 +398,11 @@ var easeInCirc = function easeInCirc(t) {
 
 /**
  * easeOutCirc
- * 
+ *
  * @param {number} t represents the absolute progress of the animation in the bounds of 0 (beginning of the animation) and 1 (end of animation).
- * 
+ *
  * @return {number} timing function
- * 
+ *
  * @since 3.0.0
  */
 var easeOutCirc = function easeOutCirc(t) {
@@ -387,66 +411,82 @@ var easeOutCirc = function easeOutCirc(t) {
 
 /**
  * easeInOutCirc
- * 
+ *
  * @param {number} t represents the absolute progress of the animation in the bounds of 0 (beginning of the animation) and 1 (end of animation).
- * 
+ *
  * @return {number} timing function
- * 
+ *
  * @since 3.0.0
  */
 var easeInOutCirc = function easeInOutCirc(t) {
-  return t < 0.5 ? (1 - Math.sqrt(1 - Math.pow(2 * t, 2))) / 2 : (Math.sqrt(1 - Math.pow(-2 * t + 2, 2)) + 1) / 2;
+  return t < 0.5
+    ? (1 - Math.sqrt(1 - Math.pow(2 * t, 2))) / 2
+    : (Math.sqrt(1 - Math.pow(-2 * t + 2, 2)) + 1) / 2;
 };
 
 /**
  * easeInElastic
- * 
+ *
  * @param {number} t represents the absolute progress of the animation in the bounds of 0 (beginning of the animation) and 1 (end of animation).
- * 
+ *
  * @return {number} timing function
- * 
+ *
  * @since 3.0.0
  */
 var easeInElastic = function easeInElastic(t) {
-  var c4 = 2 * Math.PI / 3;
-  return t === 0 ? 0 : t === 1 ? 1 : -Math.pow(2, 10 * t - 10) * Math.sin((t * 10 - 10.75) * c4);
+  var c4 = (2 * Math.PI) / 3;
+  return t === 0
+    ? 0
+    : t === 1
+    ? 1
+    : -Math.pow(2, 10 * t - 10) * Math.sin((t * 10 - 10.75) * c4);
 };
 
 /**
  * easeOutElastic
- * 
+ *
  * @param {number} t represents the absolute progress of the animation in the bounds of 0 (beginning of the animation) and 1 (end of animation).
- * 
+ *
  * @return {number} timing function
- * 
+ *
  * @since 3.0.0
  */
 var easeOutElastic = function easeOutElastic(t) {
-  var c4 = 2 * Math.PI / 3;
-  return t === 0 ? 0 : t === 1 ? 1 : Math.pow(2, -10 * t) * Math.sin((t * 10 - 0.75) * c4) + 1;
+  var c4 = (2 * Math.PI) / 3;
+  return t === 0
+    ? 0
+    : t === 1
+    ? 1
+    : Math.pow(2, -10 * t) * Math.sin((t * 10 - 0.75) * c4) + 1;
 };
 
 /**
  * easeInOutElastic
- * 
+ *
  * @param {number} t represents the absolute progress of the animation in the bounds of 0 (beginning of the animation) and 1 (end of animation).
- * 
+ *
  * @return {number} timing function
- * 
+ *
  * @since 3.0.0
  */
 var easeInOutElastic = function easeInOutElastic(t) {
-  var c5 = 2 * Math.PI / 4.5;
-  return t === 0 ? 0 : t === 1 ? 1 : t < 0.5 ? -(Math.pow(2, 20 * t - 10) * Math.sin((20 * t - 11.125) * c5)) / 2 : Math.pow(2, -20 * t + 10) * Math.sin((20 * t - 11.125) * c5) / 2 + 1;
+  var c5 = (2 * Math.PI) / 4.5;
+  return t === 0
+    ? 0
+    : t === 1
+    ? 1
+    : t < 0.5
+    ? -(Math.pow(2, 20 * t - 10) * Math.sin((20 * t - 11.125) * c5)) / 2
+    : (Math.pow(2, -20 * t + 10) * Math.sin((20 * t - 11.125) * c5)) / 2 + 1;
 };
 
 /**
  * easeInBack
- * 
+ *
  * @param {number} t represents the absolute progress of the animation in the bounds of 0 (beginning of the animation) and 1 (end of animation).
- * 
+ *
  * @return {number} timing function
- * 
+ *
  * @since 3.0.0
  */
 var easeInBack = function easeInBack(t) {
@@ -457,11 +497,11 @@ var easeInBack = function easeInBack(t) {
 
 /**
  * easeOutBack
- * 
+ *
  * @param {number} t represents the absolute progress of the animation in the bounds of 0 (beginning of the animation) and 1 (end of animation).
- * 
+ *
  * @return {number} timing function
- * 
+ *
  * @since 3.0.0
  */
 var easeOutBack = function easeOutBack(t) {
@@ -472,26 +512,28 @@ var easeOutBack = function easeOutBack(t) {
 
 /**
  * easeInOutBack
- * 
+ *
  * @param {number} t represents the absolute progress of the animation in the bounds of 0 (beginning of the animation) and 1 (end of animation).
- * 
+ *
  * @return {number} timing function
- * 
+ *
  * @since 3.0.0
  */
 var easeInOutBack = function easeInOutBack(t) {
   var c1 = 1.70158;
   var c2 = c1 * 1.525;
-  return t < 0.5 ? Math.pow(2 * t, 2) * ((c2 + 1) * 2 * t - c2) / 2 : (Math.pow(2 * t - 2, 2) * ((c2 + 1) * (t * 2 - 2) + c2) + 2) / 2;
+  return t < 0.5
+    ? (Math.pow(2 * t, 2) * ((c2 + 1) * 2 * t - c2)) / 2
+    : (Math.pow(2 * t - 2, 2) * ((c2 + 1) * (t * 2 - 2) + c2) + 2) / 2;
 };
 
 /**
  * easeOutBounce
- * 
+ *
  * @param {number} t represents the absolute progress of the animation in the bounds of 0 (beginning of the animation) and 1 (end of animation).
- * 
+ *
  * @return {number} timing function
- * 
+ *
  * @since 3.0.0
  */
 var easeOutBounce = function easeOutBounce(t) {
@@ -511,13 +553,13 @@ var easeOutBounce = function easeOutBounce(t) {
 
 /**
  * easeInBounce
- * 
+ *
  * @param {number} t represents the absolute progress of the animation in the bounds of 0 (beginning of the animation) and 1 (end of animation).
- * 
+ *
  * @uses easeOutBounce
- * 
+ *
  * @return {number} timing function
- * 
+ *
  * @since 3.0.0
  */
 var easeInBounce = function easeInBounce(t) {
@@ -526,17 +568,19 @@ var easeInBounce = function easeInBounce(t) {
 
 /**
  * easeInOutBounce
- * 
+ *
  * @param {number} t represents the absolute progress of the animation in the bounds of 0 (beginning of the animation) and 1 (end of animation).
- * 
+ *
  * @uses easeOutBounce
- * 
+ *
  * @return {number} timing function
- * 
+ *
  * @since 3.0.0
  */
 var easeInOutBounce = function easeInOutBounce(t) {
-  return t < 0.5 ? (1 - easeOutBounce(1 - 2 * t)) / 2 : (1 + easeOutBounce(2 * t - 1)) / 2;
+  return t < 0.5
+    ? (1 - easeOutBounce(1 - 2 * t)) / 2
+    : (1 + easeOutBounce(2 * t - 1)) / 2;
 };
 
 var d = document;
@@ -549,39 +593,45 @@ var w = window;
  */
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 
-var reqAnimFrame = w.requestAnimationFrame || w.mozRequestAnimationFrame || w.webkitRequestAnimationFrame || w.msRequestAnimationFrame; // eslint-disable-next-line @typescript-eslint/no-explicit-any
+var reqAnimFrame =
+  w.requestAnimationFrame ||
+  w.mozRequestAnimationFrame ||
+  w.webkitRequestAnimationFrame ||
+  w.msRequestAnimationFrame; // eslint-disable-next-line @typescript-eslint/no-explicit-any
 
 var cancelAnimFrame = w.cancelAnimationFrame || w.mozCancelAnimationFrame;
 /**
  * Shorthand for document.querySelector
- * 
+ *
  * @param {string} - a valid querySelector
- * 
+ *
  * @returns {Element | null}
  */
 
 var _$ = function _$(s) {
-  var container = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : d;
+  var container =
+    arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : d;
   return container.querySelector(s);
 };
 /**
  * Shorthand for document.querySelectorAll
- * 
+ *
  * @param {string} - a valid querySelector
- * 
+ *
  * @returns {NodeListOf<Element>}
  */
 
 var _$$ = function _$$(s) {
-  var container = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : d;
+  var container =
+    arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : d;
   return container.querySelectorAll(s);
 };
 /**
  * Shorthand for Array.prototype.forEach.call
- * 
- * @param arr 
- * @param callback 
- * 
+ *
+ * @param arr
+ * @param callback
+ *
  * @returns {void}
  */
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -591,18 +641,19 @@ var forEach = function forEach(arr, callback) {
 };
 /**
  * Check if a selector exists on the current page
- * 
- * @param {selector} selector 
- * 
+ *
+ * @param {selector} selector
+ *
  * @returns {boolean} true if the selector exists
  */
 
 var validateSelector = function validateSelector(selector) {
-  var container = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : d;
+  var container =
+    arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : d;
   var valid = true; // Check if the target is a valid selector inside the scrollToSmooth container
 
   try {
-    if (typeof selector === 'string') {
+    if (typeof selector === "string") {
       _$(selector, container);
     } else if (isNodeOrElement(selector) && container.contains(selector)) {
       selector;
@@ -615,8 +666,8 @@ var validateSelector = function validateSelector(selector) {
 };
 /**
  * Test if an object is typeof Node
- * 
- * @param obj 
+ *
+ * @param obj
  */
 
 var isNode = function isNode(obj) {
@@ -627,15 +678,19 @@ var isNode = function isNode(obj) {
     // Browsers not supporting W3 DOM3 don't have Node and
     // an exception is thrown and we end up here. Testing some
     // properties that all elements have
-    return _typeof(obj) === 'object' && typeof obj.nodeType === 'number' && typeof obj.nodeName === 'string' && _typeof(obj.ownerDocument) === 'object';
+    return (
+      _typeof(obj) === "object" &&
+      typeof obj.nodeType === "number" &&
+      typeof obj.nodeName === "string" &&
+      _typeof(obj.ownerDocument) === "object"
+    );
   }
 };
 /**
  * Test if an object is typeof HTMLElement
- * 
- * @param obj 
+ *
+ * @param obj
  */
-
 
 var isElement = function isElement(obj) {
   try {
@@ -645,20 +700,24 @@ var isElement = function isElement(obj) {
     // Browsers not supporting W3 DOM2 don't have HTMLElement and
     // an exception is thrown and we end up here. Testing some
     // properties that all elements have
-    return _typeof(obj) === 'object' && obj.nodeType === 1 && _typeof(obj.style) === 'object' && _typeof(obj.ownerDocument) === 'object';
+    return (
+      _typeof(obj) === "object" &&
+      obj.nodeType === 1 &&
+      _typeof(obj.style) === "object" &&
+      _typeof(obj.ownerDocument) === "object"
+    );
   }
 };
 /**
  * Test if an object is typeof Node or HTMLElement
- * 
+ *
  * @uses isNode
  * @uses isElement
- * 
- * @param obj 
- * 
+ *
+ * @param obj
+ *
  * @return {boolean}
  */
-
 
 var isNodeOrElement = function isNodeOrElement(obj) {
   return isNode(obj) || isElement(obj);
@@ -675,35 +734,44 @@ var getPos = function getPos() {
  */
 
 var getTime = function getTime() {
-  return w.performance && 'now' in w.performance ? performance.now() : new Date().getTime();
+  return w.performance && "now" in w.performance
+    ? performance.now()
+    : new Date().getTime();
 };
 /**
  * Determine element baseURI
- * 
- * @param {HTMLElement} el 
- * 
+ *
+ * @param {HTMLElement} el
+ *
  * @returns {string}
  */
 
 var getBaseURI = function getBaseURI(el) {
-  var sanitizeBaseURIRegex = new RegExp('(' + location.hash + ')?$');
+  var sanitizeBaseURIRegex = new RegExp("(" + location.hash + ")?$");
   var elBaseURI = el.baseURI || d.URL; // Remove Trailing Slash and Hash Parameters from the baseURI
 
-  var baseURI = elBaseURI.replace(sanitizeBaseURIRegex, '');
+  var baseURI = elBaseURI.replace(sanitizeBaseURIRegex, "");
   return baseURI;
 };
 /**
  * Get document's height
- * 
+ *
  * @returns {number}
  */
 
 var getDocHeight = function getDocHeight() {
-  return Math.max(b.scrollHeight, b.offsetHeight, b.clientHeight, dEl.scrollHeight, dEl.offsetHeight, dEl.clientHeight);
+  return Math.max(
+    b.scrollHeight,
+    b.offsetHeight,
+    b.clientHeight,
+    dEl.scrollHeight,
+    dEl.offsetHeight,
+    dEl.clientHeight
+  );
 };
 /**
  * Get window height
- * 
+ *
  * @returns {number}
  */
 
@@ -712,53 +780,53 @@ var getWinHeight = function getWinHeight() {
 };
 /**
  * Simple helper to create a numeric string with px suffix
- * 
+ *
  * @returns {string}
  */
 
 var toPxString = function toPxString(int) {
-  return int + 'px';
+  return int + "px";
 };
 
 var scrollAnimationFrame;
-var docExpanderAttr = 'data-scrolltosmooth-expand';
-var docExpanderAttrTopValue = 'top';
-var docExpanderAttrBottomValue = 'bottom';
+var docExpanderAttr = "data-scrolltosmooth-expand";
+var docExpanderAttrTopValue = "top";
+var docExpanderAttrBottomValue = "bottom";
 /**
  * Determine the target Element from the targetAttribute of a
  * scrollToSmooth selector
- * 
+ *
  * @param {Element} el element with the target Attribute
- * 
+ *
  * @returns {Element | null} valid targetSelector or null
- * 
+ *
  * @access private
  */
 
 function getTargetElement(el) {
-  var targetSelector = '';
+  var targetSelector = "";
 
-  if (this.settings.targetAttribute === 'href' && el.href) {
-    targetSelector = el.href.replace(getBaseURI(el), '');
+  if (this.settings.targetAttribute === "href" && el.href) {
+    targetSelector = el.href.replace(getBaseURI(el), "");
   } else if (el.getAttribute(this.settings.targetAttribute)) {
     targetSelector = el.getAttribute(this.settings.targetAttribute);
   } // Top on Empty Hash
 
-
-  if (this.settings.topOnEmptyHash && targetSelector == '#') {
+  if (this.settings.topOnEmptyHash && targetSelector == "#") {
     return this.container;
   }
 
-  return validateSelector(targetSelector, this.container) ? _$(targetSelector, this.container) : null;
+  return validateSelector(targetSelector, this.container)
+    ? _$(targetSelector, this.container)
+    : null;
 }
 /**
  * Filter all scrollto elements that have target attributes related to the current page
- * 
+ *
  * @returns {array} Array with all links found
- * 
+ *
  * @access private
  */
-
 
 function linkCollector() {
   var _this = this;
@@ -768,7 +836,13 @@ function linkCollector() {
     // Check if the selector is found on the page
     if (getTargetElement.call(_this, el)) {
       // Handle href attributes
-      if (_this.settings.targetAttribute === 'href' && el.href.indexOf(getBaseURI(el)) != -1 && el.href.indexOf('#') != -1 && (el.hash != '' || _this.settings.topOnEmptyHash) || _this.settings.targetAttribute != 'href') {
+      if (
+        (_this.settings.targetAttribute === "href" &&
+          el.href.indexOf(getBaseURI(el)) != -1 &&
+          el.href.indexOf("#") != -1 &&
+          (el.hash != "" || _this.settings.topOnEmptyHash)) ||
+        _this.settings.targetAttribute != "href"
+      ) {
         links.push(el);
       }
     }
@@ -777,15 +851,14 @@ function linkCollector() {
 }
 /**
  * Event handler for click events on scrollToSmooth selectors
- * 
- * @param {Element} el 
- * @param {Event} e The current Event 
- * 
+ *
+ * @param {Element} el
+ * @param {Event} e The current Event
+ *
  * @returns {void}
- * 
+ *
  * @access private
  */
-
 
 function clickHandler(el, e) {
   e.stopPropagation(); // Prevent Default Behaviour of how the browser would treat the click event
@@ -797,47 +870,48 @@ function clickHandler(el, e) {
     return;
   } // Start Scrolling
 
-
   this.scrollTo(currentTarget);
 }
 /**
  * Take a function name of an easing function and treat it like
  * a real function
- * 
- * @param {string} fn 
- * @param {number} t 
- * 
+ *
+ * @param {string} fn
+ * @param {number} t
+ *
  * @returns {Function}
- * 
+ *
  * @access private
  */
 
-
 function evalTimeFn(fn, t) {
-  return Function('"use strict"; return (' + fn + '(' + t + '))')();
+  return Function('"use strict"; return (' + fn + "(" + t + "))")();
 }
 /**
  * Calculate scroll animation duration
- * 
- * @param distance 
- * 
+ *
+ * @param distance
+ *
  * @access private
  */
-
 
 function getDuration(distance) {
   var duration = Math.max(1, this.settings.duration); // Calculate duration relative to the distance scrolled
 
   if (this.settings.durationRelative) {
-    var durationRelativePx = typeof this.settings.durationRelative == 'number' ? this.settings.durationRelative : 1000;
-    duration = Math.max(this.settings.duration, distance * (duration / durationRelativePx));
+    var durationRelativePx =
+      typeof this.settings.durationRelative == "number"
+        ? this.settings.durationRelative
+        : 1000;
+    duration = Math.max(
+      this.settings.duration,
+      distance * (duration / durationRelativePx)
+    );
   } // Set a minimum duration
-
 
   if (this.settings.durationMin && duration < this.settings.durationMin) {
     duration = this.settings.durationMin;
   } // Set a maximum duration
-
 
   if (this.settings.durationMax && duration > this.settings.durationMax) {
     duration = this.settings.durationMax;
@@ -848,12 +922,11 @@ function getDuration(distance) {
 /**
  * Determine if the current scroll position exceeds the document to
  * the top or bottom.
- * 
+ *
  * @param {number} pos Current Scroll Position
- * 
+ *
  * @access private
  */
-
 
 function scrollExceedsDocument(pos, docHeight, winHeight) {
   var min = 0;
@@ -862,12 +935,12 @@ function scrollExceedsDocument(pos, docHeight, winHeight) {
   if (pos < min) {
     return {
       to: docExpanderAttrTopValue,
-      px: pos * -1
+      px: pos * -1,
     };
   } else if (pos > max) {
     return {
       to: docExpanderAttrBottomValue,
-      px: (max - pos) * -1
+      px: (max - pos) * -1,
     };
   }
 
@@ -890,28 +963,29 @@ function expandDocument(easing, docHeight, winHeight) {
     expB.style.height = toPxString(exceeding.px);
   } else {
     forEach(expanders, function (exp) {
-      exp.style.removeProperty('height');
+      exp.style.removeProperty("height");
     });
   }
 }
 
 function getDocumentExpanders() {
-  return Array.prototype.slice.call(this.container.children).filter(function (el) {
-    return el.hasAttribute(docExpanderAttr);
-  });
+  return Array.prototype.slice
+    .call(this.container.children)
+    .filter(function (el) {
+      return el.hasAttribute(docExpanderAttr);
+    });
 }
 /**
- * Animate scrolling 
- * 
+ * Animate scrolling
+ *
  * @param {number} distFromTop Distance to be scrolled from top
  * @param {number} startPos Distance from top when the animation has started
  * @param {number} startTime The time in ms when the animation has started
- * 
+ *
  * @returns {void}
- * 
+ *
  * @access private
  */
-
 
 function animateScroll(distFromTop, startPos, startTime, docHeight, winHeight) {
   var _this2 = this;
@@ -921,14 +995,20 @@ function animateScroll(distFromTop, startPos, startTime, docHeight, winHeight) {
   var duration = getDuration.call(this, scrollPx);
   var elapsed = Math.min(duration, getTime() - startTime);
   var t = elapsed / duration;
-  var easingPattern = typeof this.settings.easing === 'string' ? evalTimeFn(this.settings.easing, t) : this.settings.easing(t);
+  var easingPattern =
+    typeof this.settings.easing === "string"
+      ? evalTimeFn(this.settings.easing, t)
+      : this.settings.easing(t);
   var timeFunction = startPos + distToScroll * easingPattern; // Callback onScrollUpdate
 
-  if (this.settings.onScrollUpdate && typeof this.settings.onScrollUpdate == 'function') {
+  if (
+    this.settings.onScrollUpdate &&
+    typeof this.settings.onScrollUpdate == "function"
+  ) {
     this.settings.onScrollUpdate({
       startPosition: startPos,
       currentPosition: timeFunction,
-      endPosition: distFromTop
+      endPosition: distFromTop,
     });
   }
 
@@ -946,23 +1026,32 @@ function animateScroll(distFromTop, startPos, startTime, docHeight, winHeight) {
 
   if (elapsed >= duration) {
     // Callback onScrollEnd
-    if (this.settings.onScrollEnd && typeof this.settings.onScrollEnd == 'function') {
+    if (
+      this.settings.onScrollEnd &&
+      typeof this.settings.onScrollEnd == "function"
+    ) {
       this.settings.onScrollEnd({
         startPosition: startPos,
-        endPosition: distFromTop
+        endPosition: distFromTop,
       });
     } // Stop when the element is reached
-
 
     return;
   }
 
   scrollAnimationFrame = reqAnimFrame(function () {
-    animateScroll.call(_this2, distFromTop, startPos, startTime, docHeight, winHeight);
+    animateScroll.call(
+      _this2,
+      distFromTop,
+      startPos,
+      startTime,
+      docHeight,
+      winHeight
+    );
   });
 }
 
-var ScrollToSmooth = /*#__PURE__*/function () {
+var ScrollToSmooth = /*#__PURE__*/ (function () {
   function ScrollToSmooth(nodes, settings) {
     _classCallCheck(this, ScrollToSmooth);
 
@@ -978,7 +1067,7 @@ var ScrollToSmooth = /*#__PURE__*/function () {
     var defaults = {
       // Selectors
       container: d,
-      targetAttribute: 'href',
+      targetAttribute: "href",
       topOnEmptyHash: true,
       offset: null,
       // Speed and duration
@@ -990,7 +1079,7 @@ var ScrollToSmooth = /*#__PURE__*/function () {
       // Callbacks
       onScrollStart: null,
       onScrollUpdate: null,
-      onScrollEnd: null
+      onScrollEnd: null,
     };
     /**
      * Build the final Settings Object
@@ -999,7 +1088,10 @@ var ScrollToSmooth = /*#__PURE__*/function () {
     settings = settings || defaults;
 
     for (var opt in defaults) {
-      if (Object.prototype.hasOwnProperty.call(defaults, opt) && !Object.prototype.hasOwnProperty.call(settings, opt)) {
+      if (
+        Object.prototype.hasOwnProperty.call(defaults, opt) &&
+        !Object.prototype.hasOwnProperty.call(settings, opt)
+      ) {
         settings[opt] = defaults[opt];
       }
     }
@@ -1011,9 +1103,16 @@ var ScrollToSmooth = /*#__PURE__*/function () {
 
     var container = b;
 
-    if (typeof this.settings.container == 'string' && validateSelector(this.settings.container)) {
+    if (
+      typeof this.settings.container == "string" &&
+      validateSelector(this.settings.container)
+    ) {
       container = _$(this.settings.container);
-    } else if (typeof this.settings.container != 'string' && isNodeOrElement(this.settings.container) && validateSelector(this.settings.container)) {
+    } else if (
+      typeof this.settings.container != "string" &&
+      isNodeOrElement(this.settings.container) &&
+      validateSelector(this.settings.container)
+    ) {
       container = this.settings.container;
     }
 
@@ -1023,100 +1122,113 @@ var ScrollToSmooth = /*#__PURE__*/function () {
      * Check this.elements and declare them based on their value
      */
 
-    this.elements = typeof nodes == 'string' ? _$$(nodes, this.container) : nodes;
+    this.elements =
+      typeof nodes == "string" ? _$$(nodes, this.container) : nodes;
   }
   /**
    * Initialize SmoothScroll
-   * 
+   *
    * @returns {void}
    */
 
+  _createClass(ScrollToSmooth, [
+    {
+      key: "init",
+      value: function init() {
+        var _this3 = this;
 
-  _createClass(ScrollToSmooth, [{
-    key: "init",
-    value: function init() {
-      var _this3 = this;
+        // Destroy any existing initialization
+        this.destroy(); // Setup Container Expansions
 
-      // Destroy any existing initialization
-      this.destroy(); // Setup Container Expansions
+        var expT = d.createElement("div");
+        expT.setAttribute(docExpanderAttr, docExpanderAttrTopValue);
+        this.container.insertBefore(expT, this.container.firstChild);
+        var expB = d.createElement("div");
+        expB.setAttribute(docExpanderAttr, docExpanderAttrBottomValue);
+        this.container.appendChild(expB); // Bind Events
 
-      var expT = d.createElement('div');
-      expT.setAttribute(docExpanderAttr, docExpanderAttrTopValue);
-      this.container.insertBefore(expT, this.container.firstChild);
-      var expB = d.createElement('div');
-      expB.setAttribute(docExpanderAttr, docExpanderAttrBottomValue);
-      this.container.appendChild(expB); // Bind Events
+        forEach(linkCollector.call(this), function (link) {
+          link.addEventListener(
+            "click",
+            clickHandler.bind(_this3, link),
+            false
+          );
+        }); // Cancel Animation on User Scroll Interaction
 
-      forEach(linkCollector.call(this), function (link) {
-        link.addEventListener('click', clickHandler.bind(_this3, link), false);
-      }); // Cancel Animation on User Scroll Interaction
-
-      var cancelAnimationOnEvents = ['mousewheel', 'wheel', 'touchmove'];
-      forEach(cancelAnimationOnEvents, function (ev) {
-        w.addEventListener(ev, function () {
-          _this3.cancelScroll();
+        var cancelAnimationOnEvents = ["mousewheel", "wheel", "touchmove"];
+        forEach(cancelAnimationOnEvents, function (ev) {
+          w.addEventListener(ev, function () {
+            _this3.cancelScroll();
+          });
         });
-      });
-    }
-    /**
-     * Destroy the current initialization.
-     * 
-     * @returns {void}
-     * 
-     * @access public
-     */
+      },
+      /**
+       * Destroy the current initialization.
+       *
+       * @returns {void}
+       *
+       * @access public
+       */
+    },
+    {
+      key: "destroy",
+      value: function destroy() {
+        var _this4 = this;
 
-  }, {
-    key: "destroy",
-    value: function destroy() {
-      var _this4 = this;
-
-      // Do nothing if the plugin is not already initialized
-      if (!this.settings) {
-        return;
-      }
-
-      this.cancelScroll(); // Delete Container Expansions
-
-      forEach(getDocumentExpanders.call(this), function (expander) {
-        expander.parentNode.removeChild(expander);
-      }); // Remove Events
-
-      forEach(linkCollector.call(this), function (link) {
-        link.removeEventListener('click', clickHandler.bind(_this4, link), false);
-      });
-    }
-    /**
-     * Trigger the scrolling animation to a specific Element or 
-     * a fixed position
-     * 
-     * @param {Element|number} target 
-     * 
-     * @returns {void}
-     * 
-     * @access public
-     */
-
-  }, {
-    key: "scrollTo",
-    value: function scrollTo(target) {
-      var windowStartPos = getPos();
-      var docHeight = getDocHeight();
-      var winHeight = getWinHeight();
-      var distFromTop = 0;
-
-      if (!isNaN(target)) {
-        if (typeof target === 'string') {
-          target = parseFloat(target);
+        // Do nothing if the plugin is not already initialized
+        if (!this.settings) {
+          return;
         }
 
-        target = docHeight - target < winHeight ? docHeight - winHeight : target;
-        distFromTop = target;
-      } else if ((_typeof(target) === 'object' || typeof target === 'string') && validateSelector(target, this.container)) {
-        if (typeof target == 'string') {
-          target = _$(target, this.container);
-        }
-        /*
+        this.cancelScroll(); // Delete Container Expansions
+
+        forEach(getDocumentExpanders.call(this), function (expander) {
+          expander.parentNode.removeChild(expander);
+        }); // Remove Events
+
+        forEach(linkCollector.call(this), function (link) {
+          link.removeEventListener(
+            "click",
+            clickHandler.bind(_this4, link),
+            false
+          );
+        });
+      },
+      /**
+       * Trigger the scrolling animation to a specific Element or
+       * a fixed position
+       *
+       * @param {Element|number} target
+       *
+       * @returns {void}
+       *
+       * @access public
+       */
+    },
+    {
+      key: "scrollTo",
+      value: function scrollTo(target) {
+        var windowStartPos = getPos();
+        var docHeight = getDocHeight();
+        var winHeight = getWinHeight();
+        var distFromTop = 0;
+
+        if (!isNaN(target)) {
+          if (typeof target === "string") {
+            target = parseFloat(target);
+          }
+
+          target =
+            docHeight - target < winHeight ? docHeight - winHeight : target;
+          distFromTop = target;
+        } else if (
+          (_typeof(target) === "object" || typeof target === "string") &&
+          validateSelector(target, this.container)
+        ) {
+          if (typeof target == "string") {
+            target = _$(target, this.container);
+          }
+          /*
         // a11y bring active element into focus
         //target.focus();
         if (d.activeElement !== target) {
@@ -1125,108 +1237,157 @@ var ScrollToSmooth = /*#__PURE__*/function () {
         }
         */
 
-
-        var targetOffset = target.getBoundingClientRect().top + windowStartPos;
-        distFromTop = docHeight - targetOffset < winHeight ? docHeight - winHeight : targetOffset;
-      }
-
-      if (this.settings.offset !== null) {
-        var offset = 0;
-
-        if (validateSelector(this.settings.offset, this.container)) {
-          var offsetElement = this.settings.offset;
-
-          if (typeof offsetElement == 'string') {
-            offsetElement = _$(this.settings.offset);
-          }
-
-          if (isNodeOrElement(offsetElement)) {
-            offset = offsetElement.getBoundingClientRect().height;
-          }
-        } else if (!isNaN(this.settings.offset)) {
-          offset = this.settings.offset;
-
-          if (typeof offset === 'string') {
-            offset = parseFloat(offset);
-          }
+          var targetOffset =
+            target.getBoundingClientRect().top + windowStartPos;
+          distFromTop =
+            docHeight - targetOffset < winHeight
+              ? docHeight - winHeight
+              : targetOffset;
         }
 
-        distFromTop -= offset;
-      } // Distance can't be negative
+        if (this.settings.offset !== null) {
+          var offset = 0;
 
+          if (validateSelector(this.settings.offset, this.container)) {
+            var offsetElement = this.settings.offset;
 
-      distFromTop = distFromTop < 0 ? 0 : distFromTop; // Callback onScrollStart
+            if (typeof offsetElement == "string") {
+              offsetElement = _$(this.settings.offset);
+            }
 
-      if (this.settings.onScrollStart && typeof this.settings.onScrollStart == 'function') {
-        this.settings.onScrollStart({
-          startPosition: windowStartPos,
-          endPosition: distFromTop
-        });
-      } // Start Scroll Animation
+            if (isNodeOrElement(offsetElement)) {
+              offset = offsetElement.getBoundingClientRect().height;
+            }
+          } else if (!isNaN(this.settings.offset)) {
+            offset = this.settings.offset;
 
+            if (typeof offset === "string") {
+              offset = parseFloat(offset);
+            }
+          }
 
-      animateScroll.call(this, distFromTop, windowStartPos, getTime(), docHeight, winHeight);
-    }
-    /**
-     * Scroll by a fixed amount of pixels
-     * 
-     * @param px 
-     * 
-     * @return {void}
-     */
+          distFromTop -= offset;
+        } // Distance can't be negative
 
-  }, {
-    key: "scrollBy",
-    value: function scrollBy(px) {
-      this.scrollTo(getPos() + px);
-    }
-    /**
-     * Method: cancelScroll
-     * 
-     * @returns {void}
-     */
+        distFromTop = distFromTop < 0 ? 0 : distFromTop; // Callback onScrollStart
 
-  }, {
-    key: "cancelScroll",
-    value: function cancelScroll() {
-      // Do nothing if no scroll Event has fired
-      if (!scrollAnimationFrame) {
-        return;
-      }
+        if (
+          this.settings.onScrollStart &&
+          typeof this.settings.onScrollStart == "function"
+        ) {
+          this.settings.onScrollStart({
+            startPosition: windowStartPos,
+            endPosition: distFromTop,
+          });
+        } // Start Scroll Animation
 
-      cancelAnimFrame(scrollAnimationFrame);
-    }
-    /**
-     * Method: update
-     * 
-     * @param {ScrollToSmoothSettings} obj The settings to be updated from the original instance 
-     * 
-     * @returns {void}
-     */
+        animateScroll.call(
+          this,
+          distFromTop,
+          windowStartPos,
+          getTime(),
+          docHeight,
+          winHeight
+        );
+      },
+      /**
+       * Scroll by a fixed amount of pixels
+       *
+       * @param px
+       *
+       * @return {void}
+       */
+    },
+    {
+      key: "scrollBy",
+      value: function scrollBy(px) {
+        this.scrollTo(getPos() + px);
+      },
+      /**
+       * Method: cancelScroll
+       *
+       * @returns {void}
+       */
+    },
+    {
+      key: "cancelScroll",
+      value: function cancelScroll() {
+        // Do nothing if no scroll Event has fired
+        if (!scrollAnimationFrame) {
+          return;
+        }
 
-  }, {
-    key: "update",
-    value: function update(obj) {
-      if (_typeof(obj) !== 'object') {
-        return;
-      }
+        cancelAnimFrame(scrollAnimationFrame);
+      },
+      /**
+       * Method: update
+       *
+       * @param {ScrollToSmoothSettings} obj The settings to be updated from the original instance
+       *
+       * @returns {void}
+       */
+    },
+    {
+      key: "update",
+      value: function update(obj) {
+        if (_typeof(obj) !== "object") {
+          return;
+        }
 
-      for (var _i = 0, _Object$entries = Object.entries(obj); _i < _Object$entries.length; _i++) {
-        var _Object$entries$_i = _slicedToArray(_Object$entries[_i], 2),
+        for (
+          var _i = 0, _Object$entries = Object.entries(obj);
+          _i < _Object$entries.length;
+          _i++
+        ) {
+          var _Object$entries$_i = _slicedToArray(_Object$entries[_i], 2),
             key = _Object$entries$_i[0],
             value = _Object$entries$_i[1];
 
-        this.settings[key] = value;
-      }
-    }
-  }]);
+          this.settings[key] = value;
+        }
+      },
+    },
+  ]);
 
   return ScrollToSmooth;
-}();
+})();
 
 /**
  * ScrollToSmooth Core Library
  */
 
 export default ScrollToSmooth;
-export { ScrollToSmooth, easeInBack, easeInBounce, easeInCirc, easeInCubic, easeInElastic, easeInExpo, easeInOutBack, easeInOutBounce, easeInOutCirc, easeInOutCubic, easeInOutElastic, easeInOutExpo, easeInOutQuad, easeInOutQuart, easeInOutQuint, easeInOutSine, easeInQuad, easeInQuart, easeInQuint, easeInSine, easeOutBack, easeOutBounce, easeOutCirc, easeOutCubic, easeOutElastic, easeOutExpo, easeOutQuad, easeOutQuart, easeOutQuint, easeOutSine, linear };
+export {
+  ScrollToSmooth,
+  easeInBack,
+  easeInBounce,
+  easeInCirc,
+  easeInCubic,
+  easeInElastic,
+  easeInExpo,
+  easeInOutBack,
+  easeInOutBounce,
+  easeInOutCirc,
+  easeInOutCubic,
+  easeInOutElastic,
+  easeInOutExpo,
+  easeInOutQuad,
+  easeInOutQuart,
+  easeInOutQuint,
+  easeInOutSine,
+  easeInQuad,
+  easeInQuart,
+  easeInQuint,
+  easeInSine,
+  easeOutBack,
+  easeOutBounce,
+  easeOutCirc,
+  easeOutCubic,
+  easeOutElastic,
+  easeOutExpo,
+  easeOutQuad,
+  easeOutQuart,
+  easeOutQuint,
+  easeOutSine,
+  linear,
+};

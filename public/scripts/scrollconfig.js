@@ -1,7 +1,7 @@
 import scrollToSmooth, { easeInOutCirc } from "./scrolltosmooth.esm.js";
 
-let smoothScroll = new scrollToSmooth("a", {
-  targetAttribute: "href",
+export let smoothScroll = new scrollToSmooth("[data-scrollto]", {
+  targetAttribute: "data-scrollto",
   duration: 800,
   durationRelative: true,
   durationMin: 300,

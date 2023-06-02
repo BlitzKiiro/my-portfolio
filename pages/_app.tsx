@@ -1,4 +1,4 @@
-import "@/styles/globals.css";
+import "@/styles/src.css";
 import type { AppProps } from "next/app";
 import { ThemeProvider } from "next-themes";
 import { Analytics } from "@vercel/analytics/react";
