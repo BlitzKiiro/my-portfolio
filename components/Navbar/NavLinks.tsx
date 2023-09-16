@@ -1,19 +1,8 @@
 import cn from "classnames";
 import Link from "next/link";
-import { useRouter } from "next/router";
 import { MouseEventHandler } from "react";
 
 const NavLinks = ({ toggleMenu }: { toggleMenu: MouseEventHandler }) => {
-  const router = useRouter();
-  const handleNavClick = (e: React.MouseEvent) => {
-    console.log("click", router.pathname);
-
-    if (router.pathname === "/" || router.pathname.startsWith("/#")) return;
-
-    e.preventDefault();
-    const target = e.target as HTMLElement;
-    router.push(target.attributes.getNamedItem("href")?.value ?? "/");
-  };
   return (
     <ul
       className={cn(
@@ -23,44 +12,20 @@ const NavLinks = ({ toggleMenu }: { toggleMenu: MouseEventHandler }) => {
       )}
       onClickCapture={toggleMenu}
     >
-      <Link
-        onClick={handleNavClick}
-        href={"/#about"}
-        data-scrollto={"#about"}
-        prefetch={false}
-        passHref
-      >
+      <Link href={"/#about"} scroll={false}>
         <li className='navlink'>About</li>
       </Link>
 
-      <Link
-        onClick={handleNavClick}
-        href={"/#work"}
-        data-scrollto={"#work"}
-        prefetch={false}
-        passHref
-      >
+      <Link href={"/#work"} scroll={false}>
         <li className='navlink'>Work</li>
       </Link>
-      <Link
-        onClick={handleNavClick}
-        href={"/#skills"}
-        data-scrollto={"#skills"}
-        prefetch={false}
-        passHref
-      >
+      <Link href={"/#skills"} scroll={false}>
         <li className='navlink'>Skills</li>
       </Link>
-      <Link
-        onClick={handleNavClick}
-        href={"/#contact"}
-        data-scrollto={"#contact"}
-        prefetch={false}
-        passHref
-      >
+      <Link href={"/#contact"}>
         <li className='navlink'>Contact</li>
       </Link>
-      <Link href={"/blog"} prefetch={false} passHref>
+      <Link href={"/blog"} scroll={false}>
         <li className='navlink'>Blog</li>
       </Link>
     </ul>

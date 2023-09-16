@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  @apply !scroll-smooth;
+}
 @font-face {
   font-family: "inter";
   src: url("/assets/fonts/Inter-Regular.ttf") format("truetype");
