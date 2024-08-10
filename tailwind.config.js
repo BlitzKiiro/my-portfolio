@@ -7,6 +7,35 @@ module.exports = {
   ],
   theme: {
     extend: {
+      animation: {
+        // smooth move up animation
+        "smooth-move-up": "smoothMoveUp 0.4s ease-in-out forwards",
+        // smooth move down animation
+        "smooth-move-down": "smoothMoveDown 0.4s ease-in-out forwards",
+        // smooth fade in animation
+        "smooth-fade-in": "smoothFadeIn 0.4s ease-in-out forwards",
+        // smooth fade out animation
+        "smooth-fade-out": "smoothFadeOut 0.4s ease-in-out forwards",
+      },
+      keyframes: {
+        smoothMoveUp: {
+          "0%": { transform: "translateY(0)" },
+          "100%": { transform: "translateY(-10px)" },
+        },
+        smoothMoveDown: {
+          "0%": { transform: "translateY(-10px)" },
+          "100%": { transform: "translateY(0)" },
+        },
+        smoothFadeIn: {
+          "0%": { opacity: "0" },
+          "100%": { opacity: "1" },
+        },
+        smoothFadeOut: {
+          "0%": { opacity: "1" },
+          "100%": { opacity: "0" },
+        },
+      },
+
       colors: {
         dark: {
           bg: {

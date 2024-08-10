@@ -34,7 +34,7 @@ const AllBlogs = ({ blogs }: { blogs: BlogPost[] }) => {
       <main className={cn("flex  justify-center my-[25px] md:my-[160px]")}>
         <div className={cn("w-[90%]", "xl:w-[1036px]", "flex flex-col")}>
           <h1 className='text-3xl md:text-4xl font-bold mb-4'>All blogs</h1>
-          <div className='my-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3'>
+          <div className='my-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
             {blogs.map((blog, index) => (
               <BlogCard key={index} blog={blog} />
             ))}
