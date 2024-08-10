@@ -21,7 +21,7 @@ const richTextRenderOptions = {
     [BLOCKS.EMBEDDED_ASSET]: (node: Node) => {
       return (
         <Image
-          className='my-6'
+          className='my-6 max-w-[700px]'
           src={"https:" + node.data.target.fields.file.url}
           height={node.data.target.fields.file.details.image.height}
           width={node.data.target.fields.file.details.image.width}
