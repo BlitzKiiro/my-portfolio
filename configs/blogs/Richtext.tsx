@@ -1,9 +1,9 @@
 import Image from "next/image";
-import { BLOCKS, Node } from "@contentful/rich-text-types";
+import { BLOCKS, Node, MARKS } from "@contentful/rich-text-types";
 import { Link as LinkIcon, Quote } from "iconoir-react";
 import { ReactNode } from "react";
 import cn from "classnames";
-
+import { CopyBlock, atomOneDark } from "react-code-blocks";
 const richTextRenderOptions = {
   renderNode: {
     [BLOCKS.PARAGRAPH]: (node: Node, children: ReactNode) => {
@@ -60,6 +60,19 @@ const richTextRenderOptions = {
           {children}
           <Quote className='inline-block mx-2  text-base ' />
         </blockquote>
+      );
+    },
+  },
+  renderMark: {
+    [MARKS.CODE]: (text: ReactNode) => {
+      return (
+        <CopyBlock
+          text={text?.toString() || ""}
+          language='javascript'
+          showLineNumbers={true}
+          theme={atomOneDark}
+          codeBlock
+        />
       );
     },
   },
