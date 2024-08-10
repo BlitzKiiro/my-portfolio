@@ -8,6 +8,7 @@ import richTextRenderOptions from "@/configs/blogs/Richtext";
 import cn from "classnames";
 import { format } from "date-fns";
 import Skeleton from "@/components/skeleton";
+import { splitCamelCaseToPascalCase } from "@/utils/helpers";
 
 export async function getStaticPaths() {
   const items = (
@@ -69,13 +70,13 @@ const Blog = ({ blog }: { blog: BlogPost }) => {
       </Head>
       <main className={cn("flex  justify-center my-[25px] md:my-[160px]")}>
         <div className={cn("w-[90%]", "xl:w-[1036px]", "flex flex-col")}>
-          <h1 className='text-3xl md:text-5xl font-bold mb-4'>
+          <h1 className='text-3xl md:text-4xl font-bold mb-4'>
             {blog.fields.title}
           </h1>
-          <span className='flex gap-x-2 text-light-text-2 dark:text-dark-text-3'>
+          <span className='flex gap-x-2 flex-wrap text-light-text-2 dark:text-dark-text-3'>
             <p>{format(new Date(blog.sys.createdAt), "yyyy-MM-dd")}</p>—
             {blog.metadata.tags.map((tag, i) => (
-              <p key={i}>🏷️{tag.sys.id}</p>
+              <p key={i}>🏷️{splitCamelCaseToPascalCase(tag.sys.id)}</p>
             ))}
           </span>
           <Image
